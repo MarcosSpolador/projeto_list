@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Fleur+De+Leah&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    height: 100%;
+    background-color: #FFFEFE; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-image: url(../img/img-pag.jpg);
+    opacity: 90%;
+    width: 100vw;
+    height: 205px;
+    text-align: center;
+}
+
+img{
+    text-align: center;
+    opacity: 95%;
+}
+
+
+main{
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+main menu .logo{
+    text-align: center;
+}
+
+.logo > img{
+    opacity: 75%;
+    
+}
+
+.logo h1{
+    font-weight: 400;
+    text-align: center;
+    font-size: 4em;
+    padding: 2px;
+    letter-spacing:1px;
+    color: #64765b;
+    font-family: "Beau Rivage", cursive;
+    opacity: 75%;
+}
+.logo .p2{
+    color: #64765b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 21px;
+    font-family:Karla, Helvetica, Arial, Verdana, sans-serif;
+    font-size: 0.8em;
+}
+
+.logo h1 span{
+   font-size:.5em;
+   opacity: 80%;
+}
+
+menu{
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 40px;
+    padding-bottom: 30px;
+}
+
+menu a{
+    font-family: "Beau Rivage", cursive;
+    text-align: center;
+    text-decoration: none;
+    color: #64765b;
+    padding: 15px;
+    margin: 5px;  
+    font-size: 1.2em;
+    transition: background-color 0.4s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+menu a:hover{
+    background-color: #a1af9b;
+    color: #FFF8F6;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.329);
+}
+
+.pag2 {
+    background-image: url(img/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);  
+}
+
+.img_folha{
+    display: block;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding: 15px; 
+}
+
+.img_folha img{
+    border-radius: 1rem;
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.329);
+    opacity: 50%;
+    height:80%;
+}
+
+.img_folha .texto_ordini{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #20281c;
+    padding: 10px;
+    border-radius: 0.5rem;
+    letter-spacing: .09rem;
+    line-height:1.4rem;
+}
+.img_folha h1{
+    font-family: "Beau Rivage", cursive;
+    padding: 3rem;
+}
+
+.img_folha p{
+    font-family:'Karla', Helvetica, Arial, Verdana, sans-serif;
+    text-align: justify;
+    padding: .2rem;
+}
+.nomes{
+    margin-top: 2rem;
+    color: #131911;
+     font-family: "Beau Rivage", cursive;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.links_ordini{
+    margin: 3rem;   
+}
+
+.links_ordini a{
+    text-decoration: none;
+    font-family:'Karla', Helvetica, Arial, Verdana, sans-serif;
+    color: #131911;
+}
+
+footer{
+    background-image: url(../img/img-pag.jpg);
+    transform:rotate(180deg);
+    width: 100vw;
+    height: 200px;
+    text-align: center;
+    opacity: 90%;
+}
+
+footer p{
+    padding: 10px;
+    text-align: center;
+    color:#333;
+    transform:rotate(180deg);
+}
