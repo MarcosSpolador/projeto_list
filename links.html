@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+        import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB9TIWDsupDl-5FIC1MJlBvZzUdgBcOCB0",
+            authDomain: "lista-presentes-34d01.firebaseapp.com",
+            databaseURL: "https://lista-presentes-34d01-default-rtdb.firebaseio.com",
+            projectId: "lista-presentes-34d01",
+            storageBucket: "lista-presentes-34d01.appspot.com",
+            messagingSenderId: "144187995874",
+            appId: "1:144187995874:web:654ab4b2cee39c001090bb",
+            measurementId: "G-30V9T3BD65"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Função para marcar um presente como comprado
+        function markAsBought(giftName, bought) {
+            const giftRef = ref(database, 'gifts/' + giftName);
+            update(giftRef, { bought: bought });
+        }
+
+        // Função para exibir os presentes da lista
+        function displayGifts() {
+            const giftsRef = ref(database, 'gifts/');
+            onValue(giftsRef, (snapshot) => {
+                const gifts = snapshot.val();
+                const giftList = document.getElementById("gift-list");
+                giftList.innerHTML = ""; // Limpa a lista antes de exibir
+
+                for (const [key, value] of Object.entries(gifts)) {
+                    const li = document.createElement("li");
+                    const checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    checkbox.checked = value.bought;
+                    checkbox.onchange = () => markAsBought(key, checkbox.checked); // Atualiza o estado quando a caixa é alterada
+                    
+                    // Cria o link para o presente
+                    const link = document.createElement("a");
+                    link.href = value.link; // Link do produto
+                    link.target = "_blank"; // Abre em nova aba
+                    link.textContent = key; // Nome do presente
+                    li.appendChild(checkbox);
+                    li.appendChild(link);
+                    li.appendChild(document.createTextNode(value.bought ? " (Comprado)" : " (Disponível)"));
+                    giftList.appendChild(li);
+                }
+            });
+        }
+
+        // Chama a função para exibir os presentes quando a página carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            displayGifts();
+        });
+    </script>
+</head>
+<body>
+    <h1>Lista de Presentes</h1>
+    <ul id="gift-list">
+        <!-- A lista de presentes será preenchida aqui -->
+    </ul>
+</body>
+</html>
