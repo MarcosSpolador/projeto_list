@@ -144,9 +144,6 @@ menu a:hover{
     font-size: 1.2rem;
 }
 
-.img_folha .endereco, h2{
-    font-size: 1rem;
-}
 .nomes{
     color: #617158;
     margin-top: 2rem;
@@ -157,7 +154,7 @@ menu a:hover{
 }
 
 .links_lojas {
-    margin: 3rem;   
+    margin: 2rem;   
     position: relative; /* Adicione isto */
     z-index: 100; /* Adicione um valor alto para garantir que esteja acima de outros elementos */
     list-style-type: none;
@@ -167,7 +164,7 @@ menu a:hover{
 }
 
 .links_lojas ul > li{
-    padding: .5rem;
+    padding: .1.5rem;
 }
 .links_lojas a{
     text-decoration: none;
