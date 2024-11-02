@@ -144,6 +144,14 @@ menu a:hover{
     font-size: 1.2rem;
 }
 
+.endereco , .material-symbols-outlined{
+    font-family:'Karla', Helvetica, Arial, Verdana, sans-serif;
+    margin: auto;
+    padding: .1rem;
+    font-size: .8rem;
+    color: #617158;
+} 
+
 .nomes{
     color: #617158;
     margin-top: 2rem;
@@ -207,6 +215,12 @@ menu a:hover{
     list-style: none;
     padding-left: .5rem;
 
+}
+
+.material-symbols-outlined{
+    transform: scale(1); 
+    padding: .5rem;
+    margin: auto;
 }
 
 footer{
