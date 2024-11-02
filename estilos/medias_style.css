@@ -41,11 +41,13 @@
     
 #gift-list{
     width: 300px;
-    font-size:.5rem;
+    font-size: .7rem;
     list-style: none;
+    padding-left: .5rem;
 }
 
 #gift-list li {
+    
     transition: background-color 0.3s ease;
     padding: 0;
     margin: 0;
@@ -57,6 +59,11 @@
     color: #617158;
     text-decoration: none;
     letter-spacing: 0;
+}
+
+
+#gift-list input[type="checkbox"] {
+    transform: scale(0.8); 
 }
 
 #gift-list li a:hover {
