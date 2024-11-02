@@ -37,4 +37,31 @@
         margin: 1rem;
         font-size: .6rem;
     }
+
+    
+#gift-list{
+    width: 300px;
+    font-size:.5rem;
+    list-style: none;
 }
+
+#gift-list li {
+    transition: background-color 0.3s ease;
+    padding: 0;
+    margin: 0;
+}
+
+#gift-list li a{
+    margin: 0;
+    padding: 0.3rem;
+    color: #617158;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+#gift-list li a:hover {
+    
+}
+
+}
+
