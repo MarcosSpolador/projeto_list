@@ -202,7 +202,12 @@ menu a:hover{
     text-shadow: 0.1px 0.1px 0.1px rgba(11, 99, 14, 0.375);
 }
 
+.texto_ordini .p-links{
+    font-size: .7rem;
+    list-style: none;
+    padding-left: .5rem;
 
+}
 
 footer{
     background-image: url(../img/img-pag.jpg);

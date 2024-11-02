@@ -103,6 +103,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.createElement("button");
     addButton.textContent = "Adicionar Presente";
     addButton.onclick = addGift;
-    document.body.appendChild(addButton); // Adiciona o botão ao corpo da página
+    document.body.appendChild(addButton); 
 });
-
