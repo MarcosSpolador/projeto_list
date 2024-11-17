@@ -63,7 +63,7 @@ main menu .logo{
     text-align: center;
     padding-top: 10px;
     padding-bottom: 21px;
-    font-family:Karla, Helvetica, Arial, Verdana, sans-serif;
+    font-family:'Karla', Helvetica, Arial, Verdana, sans-serif;
     font-size: 0.8em;
 }
 
@@ -223,6 +223,12 @@ menu a:hover{
     margin: auto;
 }
 
+.data , #timer{
+    font-family:  "Beau Rivage", cursive;
+    padding: .4rem;
+    font-size: .8rem;
+    color: #617158;
+}
 footer{
     background-image: url(../img/img-pag.jpg);
     transform:rotate(180deg);

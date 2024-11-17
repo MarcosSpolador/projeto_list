@@ -105,3 +105,4 @@ document.addEventListener('DOMContentLoaded', () => {
     addButton.onclick = addGift;
     document.body.appendChild(addButton); 
 });
+
